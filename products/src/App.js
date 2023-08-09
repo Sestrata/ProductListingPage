@@ -1,12 +1,18 @@
+// import { Routes, Route } from 'react-router-dom';
 
+import './Reset.css';
 import './App.css';
+
+import { Header } from './components/Header/Header';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        Learn React
-      </header>
+    <div className="boxApp">
+      <Header />
+
+      <main id="main-content">
+       
+      </main>
     </div>
   );
 }

@@ -1,1 +1,14 @@
 
+
+@import './components/Header/Header.css';
+
+
+
+body {
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+main {
+  /* background-image: radial-gradient(white 80%, rgb(89, 158, 147));
+  display: flex; */
+}
