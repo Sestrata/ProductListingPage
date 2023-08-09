@@ -1,0 +1,22 @@
+footer {
+    height: 8vh;
+    text-align: center;
+    background-image: radial-gradient(rgb(66, 99, 196), 20%, white);
+}
+
+footer * {
+    list-style: none;
+    text-shadow: 2px 6px 10px rgb(66, 99, 196);
+    text-decoration: none;
+    padding: 6px;
+    color: black;
+    text-shadow: 0px 6px 12px rgb(56, 58, 58);
+}
+
+footer a:hover {
+    color: rgb(66, 99, 196);
+}
+
+footer .active {
+    color: rgb(66, 99, 196);
+}
