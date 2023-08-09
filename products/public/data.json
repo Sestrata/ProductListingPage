@@ -1,0 +1,7 @@
+{
+    "products": [
+      { "id": 1, "img":"https://assets.ajio.com/medias/sys_master/root/20230623/BbG2/649555e6eebac147fcd18547/-473Wx593H-464918983-blue-MODEL.jpg", "name": "T-shirt", "description":"T-shirt for men", "price": 10.99, "rating": },
+      { "id": 2, "img":"https://images.meesho.com/images/products/153221309/42ha5_512.webp", "name": "Shoes", "description":"Shoes for woman", "price": 20.49, "rating": },
+      { "id": 3, "img":"https://media.thereformation.com/image/list/fn_select:jq:first(.%5B%5D%7Cif%20has(%22metadata%22)%20then%20select(any(.metadata%5B%5D;%20.external_id%20==%20%22sfcc-is-main%22%20and%20.value.value%20==%20%22True%22))%20else%20empty%20end)/f_auto,q_auto,dpr_3.0/w_300,c_scale/1310517-EVE.json?_s=RAABAB0", "name": "Dress", "description":"Dress for woman", "price": 5.99, "rating": }
+    ]
+  }
