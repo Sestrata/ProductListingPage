@@ -1,7 +1,303 @@
-{
-    "products": [
-      { "id": 1, "img":"https://assets.ajio.com/medias/sys_master/root/20230623/BbG2/649555e6eebac147fcd18547/-473Wx593H-464918983-blue-MODEL.jpg", "name": "T-shirt", "description":"T-shirt for men", "price": 10.99, "rating": },
-      { "id": 2, "img":"https://images.meesho.com/images/products/153221309/42ha5_512.webp", "name": "Shoes", "description":"Shoes for woman", "price": 20.49, "rating": },
-      { "id": 3, "img":"https://media.thereformation.com/image/list/fn_select:jq:first(.%5B%5D%7Cif%20has(%22metadata%22)%20then%20select(any(.metadata%5B%5D;%20.external_id%20==%20%22sfcc-is-main%22%20and%20.value.value%20==%20%22True%22))%20else%20empty%20end)/f_auto,q_auto,dpr_3.0/w_300,c_scale/1310517-EVE.json?_s=RAABAB0", "name": "Dress", "description":"Dress for woman", "price": 5.99, "rating": }
-    ]
+[
+  {
+    "id": 1,
+    "section": "men",
+    "img": "https://assets.ajio.com/medias/sys_master/root/20230623/BbG2/649555e6eebac147fcd18547/-473Wx593H-464918983-blue-MODEL.jpg",
+    "name": "Blue t-shirt",
+    "color": "blue",
+    "description": "Description of Product 1.",
+    "price": 10.99,
+    "rating": 3
+  },
+  {
+    "id": 2,
+    "section": "women",
+    "img": "https://images.meesho.com/images/products/153221309/42ha5_512.webp",
+    "name": "Pink shoes",
+    "color": "pink",
+    "description": "Description of Product 2.",
+    "price": 20.49,
+    "rating": 4
+  },
+  {
+    "id": 3,
+    "section": "women",
+    "img": "https://media.thereformation.com/image/list/fn_select:jq:first(.%5B%5D%7Cif%20has(%22metadata%22)%20then%20select(any(.metadata%5B%5D;%20.external_id%20==%20%22sfcc-is-main%22%20and%20.value.value%20==%20%22True%22))%20else%20empty%20end)/f_auto,q_auto,dpr_3.0/w_300,c_scale/1310517-EVE.json?_s=RAABAB0",
+    "name": "Blue dress",
+    "color": "blue",
+    "description": "Description of Product 3.",
+    "price": 5.99,
+    "rating": 2
+  },
+  {
+    "id": 4,
+    "section": "men",
+    "img": "https://www.jiomart.com/images/product/original/rvc1m1r2uf/tee-town-cotton-polo-neck-tshirt-for-mens-polo-1-grey-product-images-rvc1m1r2uf-0-202211011321.jpg?im=Resize=(330,410)",
+    "name": "Grey t-shirt",
+    "color": "grey",
+    "description": "Description of Product 4.",
+    "price": 14.99,
+    "rating": 5
+  },
+  {
+    "id": 5,
+    "section": "men",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQpPs-y428Jk0q8Picpbs0SRNFmOauIJq_ww&usqp=CAU",
+    "name": "Green shoes",
+    "color": "green",
+    "description": "Description of Product 5.",
+    "price": 5.00,
+    "rating": 3
+  },
+  {
+    "id": 6,
+    "section": "men",
+    "img": "https://i.pinimg.com/736x/b5/45/22/b545227f17ec4b3e64529f4724d30bb4.jpg",
+    "name": "Yellow shoes",
+    "color": "yellow",
+    "description": "Description of Product 6.",
+    "price": 4.99,
+    "rating": 3
+  },
+  {
+    "id": 7,
+    "section": "men",
+    "img": "https://n.nordstrommedia.com/id/sr3/62f699fc-d141-4220-b381-cebcedd613b1.jpeg?h=365&w=240&dpr=2",
+    "name": "Red scarf",
+    "color": "red",
+    "description": "Description of Product 7.",
+    "price": 7.99,
+    "rating": 1
+  },
+  {
+    "id": 8,
+    "section": "men",
+    "img": "https://silkscarfonline.com/wp-content/uploads/2021/06/mens-blue-scarves-6.jpg",
+    "name": "Blue scarf",
+    "color": "blue",
+    "description": "Description of Product 8.",
+    "price": 3.00,
+    "rating": 0
+  },
+  {
+    "id": 9,
+    "section": "men",
+    "img": "https://i8.amplience.net/i/egl/MensJeans-220407-slim.jpg",
+    "name": "Blue jeans",
+    "color": "blue",
+    "description": "Description of Product 9.",
+    "price": 15.00,
+    "rating": 5
+  },
+  {
+    "id": 10,
+    "section": "men",
+    "img": "https://ae01.alicdn.com/kf/S1c3ae169d86a4972b698f41b77d094c7G.jpg_640x640Q90.jpg_.webp",
+    "name": "Green jeans",
+    "color": "green",
+    "description": "Description of Product 10.",
+    "price": 9.99,
+    "rating": 3
+  },
+  {
+    "id": 11,
+    "section": "men",
+    "img": "https://lts-images.azureedge.net/product-images/52150819_SearchResults.jpg",
+    "name": "Blue hat",
+    "color": "blue",
+    "description": "Description of Product 11.",
+    "price": 20.00,
+    "rating": 5
+  },
+  {
+    "id": 12,
+    "section": "men",
+    "img": "https://m.media-amazon.com/images/I/81AZruok3IL._AC_SX679_.jpg",
+    "name": "Grey hat",
+    "color": "grey",
+    "description": "Description of Product 12.",
+    "price": 4.99,
+    "rating": 0
+  },
+  {
+    "id": 13,
+    "section": "women",
+    "img": "https://i.pinimg.com/474x/8b/cb/65/8bcb65754d8e6f08a7e3d1d2c9eab893.jpg",
+    "name": "Red dress",
+    "color": "red",
+    "description": "Description of Product 13.",
+    "price": 8.99,
+    "rating": 2
+  },
+  {
+    "id": 14,
+    "section": "women",
+    "img": "https://i.etsystatic.com/7799304/r/il/6f7a2f/1694841557/il_570xN.1694841557_5zuv.jpg",
+    "name": "Red dress",
+    "color": "red",
+    "description": "Description of Product 14.",
+    "price": 16.00,
+    "rating": 4
+  },
+  {
+    "id": 15,
+    "section": "women",
+    "img": "https://cdn-img.prettylittlething.com/1/e/0/7/1e0735add3551dfaac350b51ba332e7bbea77c31_clx3613_1.jpg",
+    "name": "Yellow dress",
+    "color": "yellow",
+    "description": "Description of Product 15.",
+    "price": 25.00,
+    "rating": 5
+  },
+  {
+    "id": 16,
+    "section": "women",
+    "img": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBUSEhESFRUSEhgaFRgaFRgVFRUSGBgZHBUcHBwaGB0cIS4lHCErIRgZJjomKy8xNTc1GiQ7QDszPy40NTEBDAwMEA8QHxISHjQrJSs0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQxNDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NP/AABEIAP8AxgMBIgACEQEDEQH/xAAbAAEAAgMBAQAAAAAAAAAAAAAABQYDBAcBAv/EADsQAAIBAgMECAQEBgEFAAAAAAABAgMRBBIhBQYxQRMiUWFxgZGhMkKxwVJy0fAHI2KCsuHCFDSDorP/xAAaAQEAAwEBAQAAAAAAAAAAAAAAAwQFAgEG/8QALREBAAICAAQEBQQDAQAAAAAAAAECAxEEEiExE0FRwQUicbHwMmGh8YGR4UL/2gAMAwEAAhEDEQA/AOzAAAAAAAAAAAAAAAAAACs75b0RwFJZUp1Z3VOD4K3Gcra2V1pzbS01a5xW3z2l0UasakvjvL+XBq2ulsui0Mu++K6fGVpZtIThRg+zRttelT1J3YlGChFdSUbdqZXvl1KzjwxMblYN1N55YmMY1oqEmlllH4ZeK+V+xazl9anToYqnVoTXR1JOFSMbuEKlrwnHkr2aaXcdIwdbPCEu1a+K0fud4776Sjy05esNgAEqIAAAAAAAAAAAAAAAAAAAAAAAANPauJ6GhWq/gpykvFRbRuGvjcOqtOpTfCcJR9VYDgWFbqypxlJpvETcnzzKhGTfjepMtexqEKWIhFSlLqPM5ZpOWa/Hj+2VelhnTrVKbXXjNVF+aMXCpHu0SLJsuca04VI1LRt26eOmtyjM+TSxx0SG2tjUqeExU4ucZxTnFtttOPWWnDkWD+HW1v8AqsGpPSSazLjZtW+sWV3evExWGeHhKVSdZdHB3btdpSk5dyfq0uZMfwz2JPC0arnpmklFflvd+F3byJMc/Mhzfp1+fml4ABaUwAAAAAAAAAAAAAAAAAAAAAAI7au0VQivmnL4Y/d9yPJmIjcvYiZnUNnE4uFO2ecY34JvV+C4sgNo7yUIwco1HVk11YRn0SX5pNXjbnxfdyI5zledSbzya1b7Oxdi7jnsJSlKpUk4pKE5KN9U1Jx9dF5Fe2afJZrgjzZqWGn0uKxlSzcnJ0oJylmqSva2brWV+MtbR9N3dnd+MOjnLrJpPzN/Y9PJFSqK7ktP6fBd/wChPYaEIwUYuN819ZLhmu0V4yRbcbW/DmkRMR3VPfDEOOMwiStGnFyS4K+eL/4+x1jZGIjUoU5xd04+/O5Qd5dnRrqLjOKmtE11la97S80uZJ7hU6sHOM5JQUIq2ZazbesVfhZHeHLTxOSJjaLNimcXPPkvIBixFVQhKbvaMW3bjZK+heZ7KChT3lqUMRB1+qp01PKoykknOUVG90lpBO9ufcXfD1lOEZrg1dHNbxKS+OaREz5swAOkYAAAAAAAAAAAAAAHxUmopybSSV23wSXMD4xFeNOMpyeWKV2ymyrutUnVlz+FfhiuC/faz3aePliJ81Ti+rHt/ql3/Q+Y0ZScadNdaXDsS5t9yKuS/NOoXMWPljc/0h9t7YVP+WvikmvBW1ZXsHhoOrd5qjveXyx7eBdd6N2KcaNKpFXnBqM5PjNSfF+D4dztyKnhkoya7/2yDLvHH7rnC0rm7doSq1PVoeQZ62ZFp3PVrduzPSkb2yfjafB/b9sjKbMtXG9DkkleUrxgm7Xla/0TPMPy5o16oM0bpML1s+s75G76XTer0a07+Jn2nFuhWS49HO3jldiG2XVblRb0bbT84smNqYjo6NWfZB2/M1aK820j6THbdXzuSur9FPqYOGKcJr4sqUndu0Vwt6suWApZKcY92ncis7s4H4bp6pX7Msf10LgeYo80nEW68sAAJlYAAAAAAAAAAAAACs70456UIvjZzt2co/f0LMc8xGJcqtVyTTlN3vo13Pw4EOa2q69U2Cu7bnyZsJSlK0Yq7eiSLbszZ6pRu9ZP4n9l3EHsKvCM05LirKX4b/r2lsPMNY1t3xFp3y+SN2/Q6TDV488ja8Y9Ze8UckqS6yZ2qUbpp81Y4vjqTp1ZwfFSlF+Tt9iDi46xLQ+FX6Wr9J/P4b1Gehsp3I/DSN1PVGVevVrTDJF2NPa1aUZYVZVZzk7vinFQWnj0nsSUEYNtUlKnQn+GtKL/APJGLX/ykc4NWyamPKUV57fn51W7Y803Rk/xfWLS+p87013OdLDx7c8/BaRT8Xd/2oi5Y3oaNOXFqUMqXFvMnZehmweapOdaS685aLsXCMV4KyNqt/l5WHOP5+fy91k2PRy079ui8Fp9bkkYqNPLGMVySRlLURqNKVp3OwAHrwAAAAAAAAAAAAACP2lsqFdaq0uUlxXj2ruJAHkxE9JexMx1hRa2DqYadpK8HwktU/32E9szaiSUJPT5ZdndL9SYqU1JOMkmnxTV0yBxmwXFuVCVv6JPq+T5eZD4c0ndU/iVvGrrCcy32weTFSklpOKkvF6P3jfzLNg9qSovo5xkrcYy0a74N6NdxFb+1IzWGnFppqor+GV2fZxOM8xfHPrCzwHNj4iPSd/bfsqmGqWuvNej/wBehuWk3G6twsaCg2nHhdce/wACQw8nbn68+/t8TKv0nbetvXRNYfZ0pRTzR9zzauF6LC18zzRyxnezvFwd0+elsyfdK/I0qeMmtFNrwbPt4ick1KTknxTbaa8DyMmKk80Unf1U7Ys097R/pjpS6SVK+sYxb/uensk/Utuw8PmlmfCH+T4fd+hWdjYCo5SjCGdRa1Uop5Xe11JrhZry7y/YDDdHBR58ZPtb/dvI1OHjn1byZfFW5N1822AC4oAAAAAAAAAAAAAAAAAAAAACN2xgVWptW60U3Brin2eD4HPsfQVSnOXz0+to/ldlK/lr/adTOV7bk8Nj3FpuEozjNWunB2auuekrebK+esa2u8Ha3Pqv1hGUpXNqkzWp00m9b66eHK/kbEGZNn0bMmZIsxJn2mQTDmVh3XxOWqov5lb7r6F1OZ4Os4TjJcU015M6PRqqUYyXBpNeauanw6+6TT092H8Sx8t4v6+3/GUAGizQAAAAAAAAAAAAAAAAAAAAAKJv7s956ddXs4yhLuas0/NK3kXsgN8qebCS7pRfvb7kWeN45WOEty56z+/3c+owTSMuQxYWWljZMO8zEvp3ykfSAI5GWmdA2FPNh6d+Sa9G7exz6lxOh7Fp5cPTXc36tsu/Dt+JP092X8U14dfr7JAAGwxAAAAAAAAAAAAAAAAAAAAAAI3b9B1MNWiuOW6/tal9iSPLHlo5omJdVtNbRaPJxqm8smjei7o93hwDw+InG1o3vF9sXw/TyMNCRhZazHfu+rpaL1i0dpZkeix7YgdM+ApOdWEFzkl6s6XTgopJcErLyKNutQzYhP8ACnL2svdovhq/D6apNvWfsw/il95Ir6R9wAGgzAAAAAAAAAAAAAAAAAAAAAAAAFb3y2Z0tDpIq8qevjHn6cfU59hp20OxtXTT1OX7y7JeGrSy/BLrR8L8PLh6FDjMX/uP8tn4Zn6eFP1j3j3/ANviGp9qBrYWd0SFKN2ZNo1PRrTKzbpYTLGdR82orwWr92vQspp7Mp5aNOPDqJ+b1f1Nw+gwU5McVfLcRk8TLa37gAJUIAAAAAAAAAAAAAAAAAAAAAAAAQO9eA6Wg5JdaF5eMbdZfR+RPHxUimmnwaszm9YvWay7x5Jx3i8eTkdDqycfQlMI9bdpGYmOWaN3DvgfP5I7S+qnrDp0I2SXYkfZ4j0+ifJAAAAAAAAAAAAAAAAAAAAAAAAAAAGrjquSlUn+GEn6RZtEJvXUy4WdvmcY/wDtf7HN7ctZl3ipz3rX1mHPsbyf74GxhJ6GDEq8ExhZGFkjdX1VezqGz6/SUqc+2Kv48H73Nsru6eJzU5Qfyu68Jf7XuWI2sN/ExxZ8vnx+HltT0n+v4AASogAAAAAAAAAAAAAAAAAAAAAAAAi94o3wtVPsj/kiUIzeH/tqvhH/ADRzbtLqn6oc4qtJZb+AwtOXCzv4HtCk6teEFzkl6uxYNs4ZUcQ0laMrSXg/93M+3DxMbbEcbavyz3bO6lKUKzu0rwenHnEuBVNjTtWh33XqmWst8PWK01DN4q9r5OawACdXAAAAAAAADw9PGAuLnyzxsD7uemK4zgZQY1M+lID6B5c9AAAAQ29NRRws782l73+xMlF/iHjWowpqVlxaSveXrwt9Wc3nVXeKu7w09x8P0mIdR8IJy8+C+vsWjenC56SmlrB6/lej97e5Efw5pNUqknHSTj1r9ielrd/uXGtTUouMldNNNdzVmc0ruiTLfWTfopeyq1pQl2Tjf11Lwc+hB0q06UuKbS7+x+aL1haueEJdsU/O2pzi84e8RHaWcAEyuAAAAAAAAAADywaPQB8OJ8uBlAGBwPMrNg8sBguwqhmcT4dIAqhkTMLony4SXADZOYb4Qc8RVXY9DoMsTKPGxScd/MqVJ6XlJu3OzbsRZuyxw/6plY9yI2wVPxl9bfYsJXNynahOD4xqP0cVb7ljO69oQ3/VKk710nHEQqJNKUVrpaTXHXwyklsPHqNoOyjKWj7JNLR9zt6mfe2nmoJ9lSL9pL7lf2dFzyRTytySvp+JdpDPy3WK/Pi1PkvoALCqAAAAAAAAAAAAAAAAAAAAAAAA0tpYZ1Kc4xeWTTyu9tfEq8NjYjNrTVsuW2eNrZr3+Lx5F1BzasT3d1vNeyF2fsXo4vryUna6i3lVlZJGxPD1Y/DNskgexGujmZmZ3KrbZqzlTcZN/EtHZaohcFNxlF3td9V9ul+XdqXDbGzViIrXLKLzQfK67fUr89gYjNTf8t5brjda2V3fmlG17c2RZKzM7hPitWI1MrbhqmaEZaapPTttqZjWwWH6OnGF724vvbu/dmySwrz+wAD0AAB//9k=",
+    "name": "Orange dress",
+    "color": "orange",
+    "description": "Description of Product 16.",
+    "price": 10.00,
+    "rating": 3
+  },
+  {
+    "id": 17,
+    "section": "women",
+    "img": "https://m.media-amazon.com/images/I/31MPe0+phXL.jpg",
+    "name": "Pink dress",
+    "color": "pink",
+    "description": "Description of Product 17.",
+    "price": 6.50,
+    "rating": 3
+  },
+  {
+    "id": 18,
+    "section": "women",
+    "img": "https://n.nordstrommedia.com/id/sr3/e103aa23-e685-4dc7-b55a-9aaf122b701f.jpeg?h=365&w=240&dpr=2",
+    "name": "Grey dress",
+    "color": "grey",
+    "description": "Description of Product 18.",
+    "price": 9.00,
+    "rating": 0
+  },
+  {
+    "id": 19,
+    "section": "women",
+    "img": "data:image/jpeg;base64,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",
+    "name": "Blue dress",
+    "color": "blue",
+    "description": "Description of Product 19.",
+    "price": 10.99,
+    "rating": 2
+  },
+  {
+    "id": 20,
+    "section": "women",
+    "img": "https://images.asos-media.com/products/pullbear-high-waisted-mom-jean-in-ink-blue/204809764-1-darkblue/?$n_480w$&wid=476&fit=constrain",
+    "name": "Blue jeans",
+    "color": "blue",
+    "description": "Description of Product 20.",
+    "price": 12.00,
+    "rating": 4
+  },
+  {
+    "id": 21,
+    "section": "women",
+    "img": "https://asset1.cxnmarksandspencer.com/is/image/mands/SD_10_T83_7251W_J0_X_EC_2?wid=1024&qlt=80",
+    "name": "Green jeans",
+    "color": "green",
+    "description": "Description of Product 21.",
+    "price": 14.99,
+    "rating": 4
+  },
+  {
+    "id": 22,
+    "section": "kids",
+    "img": "https://rukminim1.flixcart.com/image/300/300/jb3yp3k0/jean/j/m/v/11-12-years-ujjn5160me-green-us-polo-kids-original-imafyjb8cxv7ufrc.jpeg",
+    "name": "Green jeans",
+    "color": "green",
+    "description": "Description of Product 22.",
+    "price": 5.99,
+    "rating": 2
+  },
+  {
+    "id": 23,
+    "section": "kids",
+    "img": "https://img01.ztat.net/article/spp-media-p1/f0265ce71af548c7a12d160eb40a10db/30c891025d0c42f2989e77c222ed57fc.jpg?imwidth=1800&filter=packshot",
+    "name": "Yellow jeans",
+    "color": "yellow",
+    "description": "Description of Product 23.",
+    "price": 13.99,
+    "rating": 3
+  },
+  {
+    "id": 24,
+    "section": "kids",
+    "img": "data:image/jpeg;base64,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",
+    "name": "Pink jeans",
+    "color": "pink",
+    "description": "Description of Product 24.",
+    "price": 18.50,
+    "discountprice": 17.00,
+    "rating": 4
+  },
+  {
+    "id": 25,
+    "section": "kids",
+    "img": "https://cfcdn.zulily.com/images/cache/product/452x1000/Request_Jeans/REQUESTJEANS_R81763X_Orange.jpg",
+    "name": "Orange jeans",
+    "color": "orange",
+    "description": "Description of Product 25.",
+    "price": 24.99,
+    "rating": 5
+  },
+  {
+    "id": 26,
+    "section": "kids",
+    "img": "https://www.libertyshoesonline.com/pub/media/catalog/product/cache/036e1f77cd3178c76f889f39e301037b/9/9/9906-02t-v_white_creative2_.jpg",
+    "name": "White shoes",
+    "color": "white",
+    "description": "Description of Product 26.",
+    "price": 5.50,
+    "rating": 3
+  },
+  {
+    "id": 27,
+    "section": "kids",
+    "img": "https://n.nordstrommedia.com/id/sr3/ad4f2d8e-3af7-433b-89a6-f17fb0b09ac0.jpeg?h=365&w=240&dpr=2",
+    "name": "Pink shoes",
+    "color": "pink",
+    "description": "Description of Product 27.",
+    "price": 10.00,
+    "rating": 4
+  },
+  {
+    "id": 28,
+    "section": "kids",
+    "img": "https://cloud.camper.com/is/image/JGVzaG9wMDNtYmlnZ3JleSQ=/K800336-019_LF.jpg",
+    "name": "Green shoes",
+    "color": "green",
+    "description": "Description of Product 28.",
+    "price": 5.00,
+    "rating": 2
+  },
+  {
+    "id": 29,
+    "section": "kids",
+    "img": "https://www.urban-souvenir.com/wp-content/uploads/2022/06/IMG_91021.jpg",
+    "name": "Yellow t-shirt",
+    "color": "yellow",
+    "description": "Description of Product 29.",
+    "price": 7.00,
+    "rating": 1
+  },
+  {
+    "id": 30,
+    "section": "kids",
+    "img": "https://shop.tate.org.uk/dw/image/v2/BBPB_PRD/on/demandware.static/-/Sites-TateMasterShop/default/dw21778bf7/t-shirts/tate-kids-limited-edition-blue-tshirt-g1177-2.jpg?sw=556",
+    "name": "Blue t-shirt",
+    "color": "blue",
+    "description": "Description of Product 30.",
+    "price": 8.00,
+    "rating": 1
   }
+]
