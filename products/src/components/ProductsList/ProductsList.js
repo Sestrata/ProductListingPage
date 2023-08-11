@@ -5,6 +5,9 @@ export const ProductsList = () => {
     const [data, setData] = useState([]);
     const [sortedData, setSortedData] = useState([]);
     const location = useLocation();
+    const [selectedColor, setSelectedColor] = useState('');
+    const [selectedRating, setSelectedRating] = useState(0);
+    const [sortBy, setSortBy] = useState('nameAsc');
 
     let category = 'all';
     if (location.pathname === '/forWomen') {
@@ -26,8 +29,6 @@ export const ProductsList = () => {
         categoryName = 'ALL PRODUCTS';
     }
 
-    const [sortBy, setSortBy] = useState('nameAsc');
-
     const handleSortChange = (event) => {
         setSortBy(event.target.value);
     };
@@ -47,7 +48,24 @@ export const ProductsList = () => {
         return starArray;
     };
 
+    const applyFilters = () => {
+        let filteredData = data;
+
+        if (selectedColor) {
+            filteredData = filteredData.filter(item => item.color === selectedColor);
+        }
+
+        if (selectedRating > 0) {
+            filteredData = filteredData.filter(item => item.rating >= selectedRating);
+        }
+
+        setData(filteredData);
+    };
+
     useEffect(() => {
+        setSortBy('nameAsc');
+        setSelectedColor('');
+        setSelectedRating(0);
         fetch('data.json')
             .then(response => response.json())
             .then(jsonData => {
@@ -80,6 +98,38 @@ export const ProductsList = () => {
         <section className="main-container">
             <section className="filter">
                 <h3>FILTER</h3>
+                <div className="filter_color">
+                    <label>Color: </label>
+                    <select
+                        value={selectedColor}
+                        onChange={event => setSelectedColor(event.target.value)}
+                    >
+                        <option value="">All</option>
+                        <option value="red">Red</option>
+                        <option value="blue">Blue</option>
+                        <option value="green">Green</option>
+                        <option value="pink">Pink</option>
+                        <option value="grey">Grey</option>
+                        <option value="yellow">Yellow</option>
+                        <option value="orange">Orange</option>
+                        <option value="white">White</option>
+                    </select>
+                </div>
+                <div className="filter_rating">
+                    <label>Rating: </label>
+                    <select
+                        value={selectedRating}
+                        onChange={event => setSelectedRating(parseInt(event.target.value))}
+                    >
+                        <option value={0}>All</option>
+                        <option value={1}>1 star and above</option>
+                        <option value={2}>2 stars and above</option>
+                        <option value={3}>3 stars and above</option>
+                        <option value={4}>4 stars and above</option>
+                        <option value={5}>5 stars</option>
+                    </select>
+                </div>
+                <button onClick={applyFilters}>Apply Filters</button>
             </section>
 
             <section className="productsList">
