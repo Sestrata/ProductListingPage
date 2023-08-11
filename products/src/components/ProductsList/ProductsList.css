@@ -1,3 +1,5 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css);
+
 .main-container {
     min-height: 100vh;
     display: flex;
@@ -28,15 +30,23 @@
 }
 
 .categoryName {
-    background-color: rgb(89, 141, 89);
     padding: 8px;
+    text-align: center;
+    border-bottom: 2px solid rgb(66, 99, 196);
+    text-shadow: 0px 6px 12px rgb(56, 58, 58);
+}
+
+.categoryName h5 {
+    margin: 8px;
+}
+
+.sort-container {
+    padding: 4px 8px;
     text-align: center;
 }
 
-.sort {
-    background-color: pink;
-    padding: 4px 8px;
-    text-align: center;
+.sort-container .sort, .filter h3 {
+    text-shadow: 0px 6px 12px rgb(56, 58, 58);
 }
 
 .grid {
@@ -59,14 +69,18 @@
 }
 
 .moreInfo {
-    padding: 10px;
+    padding: 8px;
+}
+
+.star {
+    color: gold;
 }
 
 button {
     background-color: rgb(66, 99, 196);
     border: none;
     cursor: pointer;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .btn {
