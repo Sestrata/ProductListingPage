@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
-//тва
-
 export const ProductsList = () => {
     const [data, setData] = useState([]);
     const [sortedData, setSortedData] = useState([]);
@@ -20,7 +18,7 @@ export const ProductsList = () => {
 
         if (newVisibleItems >= sortedData.length) {
             setShowLoadMore(false);
-        }
+        };
     };
 
     let category = 'all';
@@ -30,7 +28,7 @@ export const ProductsList = () => {
         category = 'men';
     } else if (location.pathname === '/forKids') {
         category = 'kids';
-    }
+    };
 
     let categoryName = '';
     if (category === 'women') {
@@ -41,7 +39,7 @@ export const ProductsList = () => {
         categoryName = 'FOR KIDS';
     } else {
         categoryName = 'ALL PRODUCTS';
-    }
+    };
 
     const handleSortChange = (event) => {
         setSortBy(event.target.value);
@@ -57,8 +55,7 @@ export const ProductsList = () => {
             } else {
                 starArray.push(<span key={i} className="star"><i className="far fa-star"></i></span>);
             }
-        }
-
+        };
         return starArray;
     };
 
@@ -67,12 +64,11 @@ export const ProductsList = () => {
 
         if (selectedColor) {
             filteredData = filteredData.filter(item => item.color === selectedColor);
-        }
+        };
 
         if (selectedRating > 0) {
             filteredData = filteredData.filter(item => item.rating >= selectedRating);
-        }
-
+        };
         setData(filteredData);
     };
 
@@ -103,8 +99,7 @@ export const ProductsList = () => {
             sortedDataCopy.sort((a, b) => parseFloat(a.price) - parseFloat(b.price));
         } else if (sortBy === 'priceDesc') {
             sortedDataCopy.sort((a, b) => parseFloat(b.price) - parseFloat(a.price));
-        }
-
+        };
         setSortedData(sortedDataCopy);
     }, [data, sortBy]);
 
