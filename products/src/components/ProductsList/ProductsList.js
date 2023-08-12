@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
+//тва
+
 export const ProductsList = () => {
     const [data, setData] = useState([]);
     const [sortedData, setSortedData] = useState([]);
@@ -8,6 +10,18 @@ export const ProductsList = () => {
     const [selectedColor, setSelectedColor] = useState('');
     const [selectedRating, setSelectedRating] = useState(0);
     const [sortBy, setSortBy] = useState('nameAsc');
+
+    const [visibleItems, setVisibleItems] = useState(20);
+    const [showLoadMore, setShowLoadMore] = useState(true);
+
+    const handleLoadMore = () => {
+        const newVisibleItems = visibleItems + 20;
+        setVisibleItems(newVisibleItems);
+
+        if (newVisibleItems >= sortedData.length) {
+            setShowLoadMore(false);
+        }
+    };
 
     let category = 'all';
     if (location.pathname === '/forWomen') {
@@ -96,49 +110,49 @@ export const ProductsList = () => {
 
     return (
         <section className="main-container">
-            <section className="filter">
-                <h3>FILTER</h3>
-                <div className="filter_color">
-                    <label>Color: </label>
-                    <select
-                        value={selectedColor}
-                        onChange={event => setSelectedColor(event.target.value)}
-                    >
-                        <option value="">All</option>
-                        <option value="red">Red</option>
-                        <option value="blue">Blue</option>
-                        <option value="green">Green</option>
-                        <option value="pink">Pink</option>
-                        <option value="grey">Grey</option>
-                        <option value="yellow">Yellow</option>
-                        <option value="orange">Orange</option>
-                        <option value="white">White</option>
-                    </select>
-                </div>
-                <div className="filter_rating">
-                    <label>Rating: </label>
-                    <select
-                        value={selectedRating}
-                        onChange={event => setSelectedRating(parseInt(event.target.value))}
-                    >
-                        <option value={0}>All</option>
-                        <option value={1}>1 star and above</option>
-                        <option value={2}>2 stars and above</option>
-                        <option value={3}>3 stars and above</option>
-                        <option value={4}>4 stars and above</option>
-                        <option value={5}>5 stars</option>
-                    </select>
-                </div>
-                <button onClick={applyFilters}>Apply Filters</button>
-            </section>
+            <div className="categoryName">
+                <h2>{categoryName}</h2>
+                <h5>{sortedData.length} products</h5>
+            </div>
 
-            <section className="productsList">
-                <section className="small-container">
-                    <div className="categoryName">
-                        <h2>{categoryName}</h2>
-                        <h5>{sortedData.length} products</h5>
+            <section className="small-container">
+                <section className="filter">
+                    <h3>FILTER</h3>
+                    <div className="filter_color">
+                        <label>Color: </label>
+                        <select
+                            value={selectedColor}
+                            onChange={event => setSelectedColor(event.target.value)}
+                        >
+                            <option value="">All</option>
+                            <option value="red">Red</option>
+                            <option value="blue">Blue</option>
+                            <option value="green">Green</option>
+                            <option value="pink">Pink</option>
+                            <option value="grey">Grey</option>
+                            <option value="yellow">Yellow</option>
+                            <option value="orange">Orange</option>
+                            <option value="white">White</option>
+                        </select>
                     </div>
+                    <div className="filter_rating">
+                        <label>Rating: </label>
+                        <select
+                            value={selectedRating}
+                            onChange={event => setSelectedRating(parseInt(event.target.value))}
+                        >
+                            <option value={0}>All</option>
+                            <option value={1}>1 star and above</option>
+                            <option value={2}>2 stars and above</option>
+                            <option value={3}>3 stars and above</option>
+                            <option value={4}>4 stars and above</option>
+                            <option value={5}>5 stars</option>
+                        </select>
+                    </div>
+                    <button onClick={applyFilters}>Apply Filters</button>
+                </section>
 
+                <section className="productsList">
                     <div className="sort-container">
                         <h4 className="sort">SORT BY:</h4>
                         <select onChange={handleSortChange} value={sortBy}>
@@ -148,28 +162,33 @@ export const ProductsList = () => {
                             <option value="priceDesc">Price High-Low</option>
                         </select>
                     </div>
-                </section>
 
-                <section className="grid">
-                    {sortedData.map(x =>
-                        <div key={x.id} className="grid-item">
-                            <img src={x.img} alt="img" />
-                            <section className="moreInfo">
-                                <h3>{x.name}</h3>
-                                <p>{x.description}</p>
-                                <h4>{parseFloat(x.price).toFixed(2)} euro</h4>
-                                <h4>{x.discountPrice}</h4>
-                                <div className="rating">
-                                    {renderStars(x.rating)}
-                                </div>
-                                <button>Add to Cart</button>
-                            </section>
-                        </div>
-                    )}
+                    <section className="grid">
+                        {sortedData.slice(0, visibleItems).map(x =>
+                            <div key={x.id} className="grid-item">
+                                <img src={x.img} alt="img" />
+                                <section className="moreInfo">
+                                    <h3>{x.name}</h3>
+                                    <p>{x.description}</p>
+                                    {x.discountprice ? (
+                                        <div>
+                                            <h4><del>{parseFloat(x.price).toFixed(2)} euro</del></h4>
+                                            <h4 className="discountPrice">{parseFloat(x.discountprice).toFixed(2)} euro</h4>
+                                        </div>
+                                    ) : (
+                                        <h4>{parseFloat(x.price).toFixed(2)} euro</h4>
+                                    )}
+                                    <div className="rating">
+                                        {renderStars(x.rating)}
+                                    </div>
+                                    <button onClick={() => { alert('Product added to cart') }}>Add to Cart</button>
+                                </section>
+                            </div>
+                        )}
+                    </section>
+                    {showLoadMore && <button className="btn" onClick={handleLoadMore}>Load More</button>}
                 </section>
             </section>
-
-            <button className="btn">Load More</button>
         </section>
     );
 };

@@ -1,3 +1,5 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css);
+
 .header {
     height: 70px;
     display: flex;
@@ -14,7 +16,6 @@
     display: inline-block;
     font-weight: bold;
     font-size: xx-large;
-    padding-right: 10px;
     color: rgb(66, 99, 196);
     text-shadow: 0px 6px 12px rgb(56, 58, 58);
     align-items: center;
@@ -51,4 +52,42 @@
 
 .header nav .active {
     color: rgb(66, 99, 196);
+}
+
+.header .hamburger {
+    display: none;
+    cursor: pointer;
+    align-self: center;
+}
+
+.hamburger.open .bar {
+    transform: rotate(180deg);
+}
+
+@media screen and (max-width: 400px) {
+    .header .logo {
+        font-size: larger;
+    }
+
+    .navbar {
+        flex-direction: column;
+    }
+
+    .nav {
+        position: fixed;
+        top: 70px;
+        right: -100%;
+        background-color: rgba(66, 99, 196, 0.8);
+        width: 36%;
+        padding: 10px 0 10px;
+        transition: right 0.2s ease-in-out;
+    }
+    
+    .nav.open {
+        right: 0;
+    }
+
+    .header .hamburger {
+        display: block;
+    }
 }

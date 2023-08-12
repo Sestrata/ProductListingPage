@@ -1,20 +1,29 @@
+import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
 export const Header = () => {
+    const [menuOpen, setMenuOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setMenuOpen(!menuOpen);
+    };
 
     return (
         <header className="header">
             <div className="logo" href="#">
                 <p>LOGO</p>
             </div>
-            <nav>
-                <div>
-                    <NavLink to="/">ALL PRODUCTS</NavLink>
-                    <NavLink to="/forWomen">FOR WOMEN</NavLink>
-                    <NavLink to="/forMen">FOR MEN</NavLink>
-                    <NavLink to="/forKids">FOR KIDS</NavLink>
+            <nav className={`nav ${menuOpen ? 'open' : ''}`}>
+                <div className="navbar">
+                    <NavLink to="/" onClick={toggleMenu}>ALL PRODUCTS</NavLink>
+                    <NavLink to="/forWomen" onClick={toggleMenu}>FOR WOMEN</NavLink>
+                    <NavLink to="/forMen" onClick={toggleMenu}>FOR MEN</NavLink>
+                    <NavLink to="/forKids" onClick={toggleMenu}>FOR KIDS</NavLink>
                 </div>
             </nav>
-        </ header>
+            <div className={`hamburger ${menuOpen ? 'open' : ''}`} onClick={toggleMenu}>
+                <div className="bar"><i className="fas fa-bars"></i></div>
+            </div>
+        </header>
     );
 };

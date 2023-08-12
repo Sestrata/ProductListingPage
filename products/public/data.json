@@ -7,6 +7,7 @@
     "color": "blue",
     "description": "Description of Product 1.",
     "price": 10.99,
+    "discountprice": 8.00,
     "rating": 3
   },
   {
@@ -87,6 +88,7 @@
     "color": "blue",
     "description": "Description of Product 9.",
     "price": 15.00,
+    "discountprice": 10.00,
     "rating": 5
   },
   {
@@ -107,6 +109,7 @@
     "color": "blue",
     "description": "Description of Product 11.",
     "price": 20.00,
+    "discountprice": 18.00,
     "rating": 5
   },
   {
@@ -147,6 +150,7 @@
     "color": "yellow",
     "description": "Description of Product 15.",
     "price": 25.00,
+    "discountprice": 20.00,
     "rating": 5
   },
   {
@@ -207,6 +211,7 @@
     "color": "green",
     "description": "Description of Product 21.",
     "price": 14.99,
+    "discountprice": 12.00,
     "rating": 4
   },
   {
@@ -237,7 +242,6 @@
     "color": "pink",
     "description": "Description of Product 24.",
     "price": 18.50,
-    "discountprice": 17.00,
     "rating": 4
   },
   {
@@ -248,6 +252,7 @@
     "color": "orange",
     "description": "Description of Product 25.",
     "price": 24.99,
+    "discountprice": 22.00,
     "rating": 5
   },
   {
